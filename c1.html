@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <p id="i1"></p>
+        <script>
+            function disp(n){//n=17
+                document.getElementById("i1").innerHTML=n;
+            }
+            function calc(n1,n2,fun){//n1=7,n2=10,fun=disp
+                let sum=n1+n2;//17
+                fun(sum);//disp(17)
+                }
+            calc(7,10,disp);
+
+            
+        </script>
+    </body>
+</html>

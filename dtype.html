@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <script>
+            var m=null;
+            var sum= 361+m;//for calculation null is considered as 0
+            document.write(m+"<br>");
+            document.write(sum + "<br>");
+
+            var m=undefined;
+            var m;
+            var sum=357+m;//for calculation undefined is not considered as 0
+            document.write(m + "<br>");
+            document.write(sum + "<br>");
+
+            var age=68;
+            if(age<13)
+                document.write("You are tweens<br>")
+            else if(age<18)
+                document.write("You are teens<br>")
+            else if(age < 60)
+                document.write("You are adults<br>")
+            else
+                document.write("You are seniors<br>")
+
+
+            /*
+            display hello 100 times
+            1
+            2
+            3
+            .
+            .
+            100
+            */
+
+            var x=1;
+            while(x<=10){
+                var y=Math.random();
+                document.write(y+"<br>");
+                x=x+1;
+            }
+
+            function f1(){
+                const a=30;
+                a=a+10;//40
+                if(a<100){
+                    let b=a*2;
+                    document.write(b + "<br>");
+                }
+                
+            }
+            f1();
+        </script>
+    </body>
+</html>

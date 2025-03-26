@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <h2>JavaScript</h2>
+        <p id="i1"></p>
+        <p id="i2"></p>
+        <p id="i3"></p>
+        <p id="i4"></p>
+        <script>
+            class student{
+                constructor(n,y,g){//called automatically when we create object
+                    this.name=n;
+                    this.year=y;
+                    this.gen=g;
+                }
+                age(){
+                    let d=new Date();
+                    return d.getFullYear()-this.year;//2025-2016
+                }
+            }
+
+            class result extends student{
+                constructor(name,year,gen,per){
+                    super(name,year,gen);//constructor of parent(student)
+                    this.percent=per;
+                }
+                show(){return this.percent;}
+                static disp(){return "Hello";}
+            }
+            s1=new result('Rahi',2020,'Female',85);
+            document.getElementById("i4").innerHTML = result.disp()+", this is " + s1.name + " born in " + s1.year + ", I am " + s1.gen + " of age" + s1.age() + " I secured "+s1.show()+" percentage";
+
+            s1=new student('Madhurjya',2016,'Male');//object1
+            document.getElementById("i1").innerHTML= result.disp() +",  this is "+s1.name+" born in "+s1.year+", I am "+s1.gen+" of age"+s1.age();
+
+            s1 = new student('Sana', 2018, 'Female');//object2
+                document.getElementById("i2").innerHTML = result.disp() +",  this is " + s1.name + " born in " + s1.year + ", I am " + s1.gen + " of age" + s1.age();
+
+            s1 = new student('Janki', 2024, 'Female');//object3
+                document.getElementById("i3").innerHTML = result.disp() +",  this is " + s1.name + " born in " + s1.year + ", I am " + s1.gen + " of age" + s1.age();
+        </script>
+    </body>
+</html>

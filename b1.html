@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            var stu={
+                name:'Tenzin',
+                age:13,
+                grade:8
+            };
+
+            document.write(stu.name+"<br>");
+            var s=JSON.stringify(stu);//object to JSON text
+            document.write(s.name + "<br>");
+            var Ob = JSON.parse(s);//JSON text to Object
+            document.write(Ob.name + "<br>");
+
+            
+        </script>
+    </body>
+</html>
