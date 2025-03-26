@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            function f1(a,b,c,d){//3,7,1,2
+                var result=a+b+c+d;
+                return result;
+            }
+            document.write(f1(3,7,1,2)+"<br><br>");
+            var i,x=0;
+            function f2(){
+                for(i=0;i<arguments.length;i++)
+                x=x+arguments[i];
+                return x;
+            }
+            document.write(f2(3, 7, 1, 2, 5) + "<br><br>");
+        </script>
+    </body>
+</html>
